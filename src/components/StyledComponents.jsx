@@ -1,6 +1,15 @@
-// そのままのCSSを使用できる！
+import styled from "styled-components";
 
-.container {
+export const StyledComponents = () => {
+  return (
+    <StyledContainer>
+      <StyledTitle>- Styled Components-</StyledTitle>
+      <StyledButton>FILGHT!</StyledButton>
+    </StyledContainer>
+  );
+};
+
+const StyledContainer = styled.div`
   border: solid 2px #392eff;
   border-radius: 20px;
   padding: 8px;
@@ -8,14 +17,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+`;
 
-.title {
+const StyledTitle = styled.p`
   margin: 0px;
   color: pink;
-}
+`;
 
-.button {
+const StyledButton = styled.button`
   background-color: orange;
   border: none;
   padding: 8px;
@@ -25,4 +34,4 @@
     color: #fff;
     cursor: pointer;
   }
-}
+`;
